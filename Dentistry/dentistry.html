@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Стоматоша</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="dentistry.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-logo">
+                    <figure>
+                        <img class="logo__img" src="img/company-name.svg">
+                        <figcaption>стоматология для детей и взрослых</figcaption>
+                    </figure>
+                </div>
+                <div class="navigation-menu">
+                    <ul class="nav-menu">
+                        <li><a href="#services" class="navigation-link">Услуги</a></li>
+                        <li><a href="#" class="navigation-link">Цены</a></li>
+                        <li><a href="#" class="navigation-link">Акции</a></li>
+                        <li><a href="#about-the-clinic" class="navigation-link">О клинике</a></li>
+                        <li><a href="#" class="navigation-link">Контакты</a></li>
+                    </ul>
+                    <a href="tel:+74732619719" class="tel tel-in-nav-menu">+7 (473) 261-97-19</a>
+                    <div class="button-collection">
+                        <button class="eye__button"><img class="okko__button" src="img/eye.svg" alt="eye__button" ></button>
+                        <button class="profole__button"><img class="account__button" src="img/profile.svg" alt="profole__button" ></button>
+                        <button style="background-color: #F52850; border: none;" class="navigation-menu-burger__button" aria-expanded="false" aria-controls="list"><img class="navigation-menu-burger__img" alt="burger-menu" src="img/burger-menu.svg"></button>
+                        <ul class="menu" id="list" aria-hidden="true">
+                            <li class="menu-item"><a href="#services" class="menu-link" tabindex="-1">Услуги</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link" tabindex="-1">Цены</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link" tabindex="-1">Акции</a></li>
+                            <li class="menu-item"><a href="#about-the-clinic" class="menu-link" tabindex="-1">О клинике</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link" tabindex="-1">Контакты</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link profile" tabindex="-1">Профиль</a></li>
+                            <li class="menu-item"><a href="tel:+74732619719" class=" menu-link tel-in-burger-menu" tabindex="-1">+7 (473) 261-97-19</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const button = document.querySelector('.navigation-menu-burger__button')
+        const menu = document.querySelector('.menu')
+        const menuLinks = document.querySelectorAll('.menu-link')
+        
+        button.addEventListener('click', (e) => {
+            button.classList.toggle('active')
+            if (button.classList.contains('active')) {
+                button.setAttribute('aria-expanded', 'true')
+                menu.setAttribute('aria-hidden', 'false')
+                menuLinks.forEach(link => link.setAttribute('tabindex', '0'))
+            } else {
+                button.setAttribute('aria-expanded', 'false')
+                menu.setAttribute('aria-hidden', 'true')
+                menuLinks.forEach(link => link.setAttribute('tabindex', '-1'))
+            }
+        })
+    </script>
+    <main>
+        <div class="container">
+            <div class="record-application-first-block">
+                <img class="doctors-photo__img" alt="doctors-photo" src="img/doctors-photo-one.png">
+                <div class="plus-first-block" style="background-color: #F52850; margin-left: 60px;"><img src="img/plus.svg" class="plus-in-first-blok" alt="plus-in-circle"></div>
+                <p>Откройте для ребенка </br> волшебный мир здоровых </br> улыбок в «Стоматоше»!<a href="#services" class="link link-services__a" style="font-size: 20px; margin-top: 10px;">Записаться →</a></p>
+            </div>
+            <img class="circle-group__img" alt="circle-group" src="img/circle-group.svg">
+            <div class="picture-in-main-window">
+                <img class="company-name-title__img" alt="company-name-title" src="img/company-name.svg" style="width: 92.3%;">
+                <img class="dragon-in-main-window__img" alt="dragon-in-main-window" src="img/dragon-in-main-window.svg">
+            </div>
+            <div class="information-in-main-window">
+                <p class="information-in-main-window-one__p">ТОП-5 СТОМАТОЛОГИЯ</p>
+                <p class="information-in-main-window-two__p">ДЛЯ ДЕТЕЙ И ВЗРОСЛЫХ</p>
+            </div>
+            <div class="record-application-second-block">
+                <img class="doctors-photo__img img-position-one" src="img/doctors-photo-two.png">
+                <img class="doctors-photo__img img-position-one doctors-photo-three" src="img/doctors-photo-three.png">
+                <p class="text-record-application-second-block__p">Первое бесстрашное путешествие в мир </br> стоматологии, которое станет началом </br> дружбы вашего ребенка с зубным врачом!</p>
+            </div>
+        </div>
+    </main>
+    <section id="about-the-clinic" class="about-the-clinic">
+        <div class="container">
+            <div class="about-the-clinic-title">
+                <span class="little-comment__span">О клинике с любовью</span>
+                <div class="about-the-clinic-title__div">
+                    <div class="about-the-clinic-title__h1">
+                        <h1>СТОМАТОЛОГИЯ С </br> <mark style="color: #F52850; background: none;">БОЛЬШИМ СЕРДЦЕМ</mark></h1>
+                    </div>
+                    <p class="text-record-application-block__p" style="margin-top: -30px;">Стоматоша - это не только клиника, но и </br> волшебный мир, где каждый визит </br> становится приключением.</p>
+                </div>
+                <div class="collection-of-picture">
+                    <img class="doctors-photo__img doctors-photo-four" src="img/doctors-photo-four.png" style="margin-right: -40px;" alt="doctor">
+                    <img class="doctors-photo__img" src="img/doctors-photo-five.png" alt="doctor">
+                    <div class="circle-empty"> </div>
+                </div>
+            </div>
+            <div class="slider-pictures">
+                <img class="picture" src="img/picture-one.png" alt="picture">
+                <img class="picture" src="img/picture-two.png" alt="picture">
+                <img class="picture" src="img/picture-three.png" alt="picture">
+            </div>
+            <div class="about-the-clinic-title__div">
+                <p class="text-record-application-block__p" style="margin-top: -160px;">Здесь каждый маленький пациент </br> чувствует себя как в сказке и ухаживает </br> за своими зубками с радостью!</p>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="content">
+            <div class="services-title">
+                <span class="little-comment__span">Услуги клиники</span>
+                <img class="dragon-in-services-window__img" src="img/dragon-in-other-window.svg" alt="dragon-in-services-window">
+                <div class="services-title__div">
+                    <div class="services-title__h2">
+                        <h2>ПОЛНЫЙ СПЕКТР УСЛУГ </br> ДЛЯ <mark style="color: #F52850; background: none;">САМЫХ ВАЖНЫХ</mark> </br> ПАЦИЕНТОВ</h2>
+                    </div>
+                    <div class="text-services">
+                        <p class="text-record-application-block__p">Созданная с особым вниманием </br> к комфорту малышей, «Стоматоша» </br> снимает страх перед стоматологом, </br> заботясь о здоровье зубов с самого </br> детства. </p>
+                        <p class="text-record-application-block__p">Современные и бережные </br> методы лечения зубов </br> для детей всех возрастов</p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-block__div">
+                <div class="services-block">
+                    <span class="number-service__span">01</span>
+                    <p class="name-service__p">Диагностика</p>
+                    <button class="drop-down-list__button plus-third-block" aria-expanded="false" aria-controls="list"><img src="img/plus.svg" class="plus-in-third-block" alt="plus-in-circle" /></button>
+                    <ul class="drop-down" id="list" aria-hidden="true">
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 1</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 2</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 3</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 4</a></li>
+                    </ul>
+                </div>
+                <div class="services-block">
+                    <span class="number-service__span">02</span>
+                    <p class="name-service__p">Терапевтическая стоматология</p>
+                    <button class="drop-down-list__button plus-third-block" aria-expanded="false" aria-controls="list"><img src="img/plus.svg" class="plus-in-third-block" alt="plus-in-circle" /></button>
+                    <ul class="drop-down" id="list" aria-hidden="true">
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 1</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 2</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 3</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 4</a></li>
+                    </ul>
+                </div>
+                <div class="services-block">
+                    <span class="number-service__span">03</span>
+                    <p class="name-service__p">Хирургическая стоматология</p>
+                    <button class="drop-down-list__button plus-third-block" aria-expanded="false" aria-controls="list"><img src="img/plus.svg" class="plus-in-third-block" alt="plus-in-circle" /></button>
+                    <ul class="drop-down" id="list" aria-hidden="true">
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 1</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 2</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 3</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 4</a></li>
+                    </ul>
+                </div>
+                <div class="services-block">
+                    <span class="number-service__span">04</span>
+                    <p class="name-service__p">Пародонтологическое лечение и профилактика</p>
+                    <button class="drop-down-list__button plus-third-block" aria-expanded="false" aria-controls="list"><img src="img/plus.svg" class="plus-in-third-block" alt="plus-in-circle" /></button>
+                    <ul class="drop-down" id="list" aria-hidden="true">
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 1</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 2</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 3</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 4</a></li>
+                    </ul>
+                </div>
+                <div class="services-block">
+                    <span class="number-service__span">05</span>
+                    <p class="name-service__p">Ортодонтия</p>
+                    <button class="drop-down-list__button plus-third-block" aria-expanded="false" aria-controls="list"><img src="img/plus.svg" class="plus-in-third-block" alt="plus-in-circle" /></button>
+                    <ul class="drop-down" id="list" aria-hidden="true">
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 1</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 2</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 3</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 4</a></li>
+                    </ul>
+                </div>
+                <div class="services-block">
+                    <span class="number-service__span">06</span>
+                    <p class="name-service__p">Адаптация детей к лечению у стоматолога</p>
+                    <button class="drop-down-list__button plus-third-block" aria-expanded="false" aria-controls="list"><img src="img/plus.svg" class="plus-in-third-block" alt="plus-in-circle" /></button>
+                    <ul class="drop-down" id="list" aria-hidden="true">
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 1</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 2</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 3</a></li>
+                        <li class="drop-down-item"><a href="#" class="drop-down-link" tabindex="-1">Услуга 4</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="services-title__div">
+                <p class="text-record-application-block__p" style="margin-top: 40px; width: 700px;">«Стоматоша» ждет вас, чтобы сделать </br> улыбку вашего ребенка сияющей </br> и здоровой на долгие годы.</p>
+            </div>
+            <button class="sing-up__button" style="margin-bottom: 40px;">Записаться</button>
+        </div>
+    </section>
+    
+    <script>
+        const dropdownbuttons = document.getElementsByClassName('drop-down-list__button');
+        const dropdowns = document.getElementsByClassName('.drop-down');
+        const dropdownLinks = document.querySelectorAll('.drop-down-link');
+
+        for (let index = 0; index < dropdownbuttons.length; index++) {
+            const element = dropdownbuttons[index];
+            element.addEventListener('click', (e) => {
+                element.classList.toggle('active');
+                if (element.classList.contains('active')) {
+                    element.setAttribute('aria-expanded', 'true');
+                    dropdowns[index].setAttribute('aria-hidden', 'false');
+                    dropdownLinks.forEach(link => link.setAttribute('tabindex', '0'));
+                } else {
+                    element.setAttribute('aria-expanded', 'false');
+                    dropdowns[index].setAttribute('aria-hidden', 'true');
+                    dropdownLinks.forEach(link => link.setAttribute('tabindex', '-1'));
+            }});
+        }
+    </script>
+    
+
+</body>
+</html>
