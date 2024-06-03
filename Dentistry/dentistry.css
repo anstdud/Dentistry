@@ -32,8 +32,12 @@ body {
     max-height: 1080px;
     background-color: #F8F8F8;
     position: relative;
+    
+}
+body, .main-view {
     background-repeat: no-repeat;
     background: linear-gradient(#3A7AFA, 50%, #F8F8F8);
+    background-attachment: fixed;
 }
 .nav {
     display: flex;
